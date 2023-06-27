@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>'title her'
+</title>
+head
+<body>
+    <form action="validate" method="post">
+    enter your mail id<input type="mail" name="id"><br>
+    <div onclick="sendotp()">request otp</div><br>
+    enter otp received<input type="text" name="otp"><br>
+    <input type="submit">
+    </form>
+<script type="text/javascript">
+    function sendotp(){
+        var mail=document.forms[0]['id'].value;
+        var x=new XMLHttpRequest();
+        x.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200){
+            window.alert(this.responseText);
+            };
+        };
+        
+        x.open("get","/sendotp/"+mail,true);
+        x.send();
+       
+    }
+</script>
+
+</body>
+</html>
