@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<title>'title her'
+</title>
+<style type="text/css">
+    #chat,#input{
+        width:50%;
+        margin:auto;
+        border:2px solid green;
+        list-style-type: none;
+        position: relative;
+    }
+    #input>input{
+       display:inline-block;
+       width: 98%;
+       overflow: hidden;
+        
+
+    }
+    .initial{
+        font-weight: bold;
+
+    }
+    .client{
+        display: flex;
+        justify-content: end; 
+      
+    }
+    .clientchat{       
+        border:1px solid red;
+        color:green
+    }
+    .clientchat:hover{
+        background-color:rgb(70, 176, 70);
+        color:white;
+    }
+    .botchat:hover{
+        background-color: rgb(180, 89, 89);
+        color:white;
+    }
+
+    .bot{
+       display: block;
+        max-width:50%;
+       
+    }
+    .botchat{    
+        display: inline-block;   
+        border:1px solid gray;
+            
+    }
+.clientchat{
+    max-width:50%;
+}
+    .botchat,.clientchat{
+        padding:5px;
+        border-radius:1px 10px 10px 10px;
+        cursor: pointer;
+       margin:2px;
+
+    }
+    #input{
+        border:2px solid red;
+        position: relative;
+
+    }
+#button{
+        position: absolute;
+        top:0;
+        right:0;
+
+}
+</style>
+</head>
+<body>
+   <div id="chat"></div>
+    <div id="input">
+    <input type="text" id="msg" width="100%" onkeydown="if(event.keyCode==13){sendAgent()}">
+    <button onclick="sendAgent()"  id="button">send</button>
+    </div>
+</body>
+<script src="./chat.js"></script>
+</html>
