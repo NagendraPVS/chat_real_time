@@ -75,7 +75,7 @@ app.post("/recieve", (req, res) => {
         })
     }
 });
-app.listen(8080);
+app.listen(8070);
 
 //functions
 function send(sendData) {
